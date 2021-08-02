@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    min-height: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+svg {
+    fill: #2FAA9F;
+}
+
+.form-control {
+    width: 10rem;
+    margin: auto;
+}
+
+.container {
+    padding: 50px 0;
+}
+
+#answer-box {
+    font-weight: bold;
+    margin: 10px;
+}
+
+#count-box {
+    color: grey;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#quiz {
+    display: none;
+}
+
+#complete {
+    display: none;
+}
+
+#viewDetails {
+    display: none;
+    padding: 10px;
+    font-size: small;
+}
