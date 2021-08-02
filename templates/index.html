@@ -251,7 +251,14 @@
 
                 <div id="complete">
                     <h3>You've Completed All! Good Job!</h3>
-                    <button class="btn btn-outline-secondary btn-sm mt-3" id="result">Check Result</button>
+                    <form class="form" method="post" action="">
+                        <div id="value-box">
+                            <input class="form_input" type="number" id="correctValue" name="correct">
+                            <input class="form_input" type="number" id="passedValue" name="pass">
+                            <input class="form_input" type="text" id="passedList" name="passList">
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm mt-3" id="result" type="submit">Check Result</button>
+                    </form>
                 </div>
             </div>
         </div>

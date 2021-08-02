@@ -37,11 +37,7 @@ svg {
     margin: 15px;
 }
 
-#quiz {
-    display: none;
-}
-
-#complete {
+#quiz, #complete, #value-box {
     display: none;
 }
 

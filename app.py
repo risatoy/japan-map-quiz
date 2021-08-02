@@ -7,9 +7,13 @@ app.secret_key = 'key'
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        session['correct'] = request.form['correct']
-        session['pass'] = request.form['pass']
+        session['correct'] = int(request.form['correct'])
+        session['pass'] = int(request.form['pass'])
         session['passList'] = request.form['passList']
+        return redirect(url_for('result'))
+
+    elif request.method == 'GET':
+        session.clear()
 
     return render_template('index.html')
 

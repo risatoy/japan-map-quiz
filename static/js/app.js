@@ -18,18 +18,6 @@ start.addEventListener("click", () => {
 })
 
 resultButton.addEventListener("click", () => {
-    const xhr = new XMLHttpRequest();
-    const data = new FormData()
-
-    data.append('correct', 47 - passed.length)
-    data.append('pass', passed.length)
-    data.append('passList', passed)
-    xhr.open('POST', '/', true);
-    xhr.send(data)
-    
-    
-    window.location.href = "/result"
-
     visited = []
     passed = []
 })
@@ -45,6 +33,15 @@ function startQuiz() {
             if (visited.length === 47) {
                 quiz.style.display = "none";
                 complete.style.display = "block";
+                
+                const correctValue = document.querySelector('#correctValue')
+                const passedValue = document.querySelector('#passedValue')
+                const passedList = document.querySelector('#passedList')
+                correctValue.value = 47 - passed.length
+                passedValue.value = passed.length
+                passedList.value = passed
+
+                
             } else if (inputText.toLowerCase() === titleText.toLowerCase()) {
                 answerBox.innerText = "Correct!";
 
@@ -68,6 +65,13 @@ function startQuiz() {
         if (visited.length === 47) {
             quiz.style.display = "none";
             complete.style.display = "block";
+
+            const correctValue = document.querySelector('#correctValue')
+            const passedValue = document.querySelector('#passedValue')
+            const passedList = document.querySelector('#passedList')
+            correctValue.value = 47 - passed.length
+            passedValue.value = passed.length
+            passedList.value = passed
         } else {
             input.value = "";
             prefecture.style.fill = "#006d77";
