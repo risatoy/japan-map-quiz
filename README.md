@@ -1,5 +1,5 @@
 # Project Title
-Japan Quiz Map
+Japan Map Quiz
 
 ## Installation
 
@@ -9,6 +9,7 @@ python app.py
 ```
 
 ## Description
+web-app to learn about prefectures of Japan, available in English & Japanese!
 
 ## Implementation
 
